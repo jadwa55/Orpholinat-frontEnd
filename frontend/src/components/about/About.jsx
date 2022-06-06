@@ -1,9 +1,12 @@
 import React from 'react'
 import './about.css'
+import img from '../../images/girl/png'
 
 const About = () => {
   return (
-    <div>About</div>
+    <section id='about'>
+      about
+    </section>
   )
 }
 
