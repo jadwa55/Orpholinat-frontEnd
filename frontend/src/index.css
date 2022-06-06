@@ -12,9 +12,9 @@
 
 :root {
   --color-bg: #1f1f38;
-  --color-bg-variant: #2C2c6C;
-  --color-primary: #4db5ff;
-  --color-primay-variant: #rgba(77, 181, 255, 0.4);
+  --color-bg-variant: #470013;
+  --color-primary: #A4032E;
+  --color-primay-variant: #F285A2;
   --color-white: #fff;
   --color-light: #rgba(255, 255, 255, 0.6);
 
@@ -38,6 +38,7 @@ body {
   /* background-color: var(--color-bg); */
   /* color: var(--color-white); */
   line-height: 1.7;
+  /* text-align: center; */
   /* background-image: url(../src/images/cover.png); */
 }
 
@@ -45,6 +46,7 @@ body {
 .container {
   width: var(--container-width-lg);
   margin: 0 auto;
+  /* margin-left: 5%; */
 }
 
 h1,
@@ -62,6 +64,8 @@ h1 {
 section {
   margin-top: 8rem;
   height: 100vh;
+  margin-left: 5%;
+  /* align-items: center; */
 }
 
 section > h2, 
