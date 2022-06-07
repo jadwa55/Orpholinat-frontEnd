@@ -14,43 +14,68 @@ const Portfolio = () => {
             <img src={img1} alt="" />
           </div>
           <h3>Orphelinat du Grand Casablanca</h3>
-          <a href="" className='btn'>Découvrez plus</a>
+          <div className="orphoninat__item-cta">
+            <h4>jzvefbqlb jqrbtreuaq </h4>
+            <a href="" className='btn'>Découvrez plus</a>
+          </div>
         </article>
+
         <article className="orpholinat__item">
           <div className="orpholinat__item-image">
             <img src={img1} alt="" />
           </div>
           <h3>Orphelinat du Grand Casablanca</h3>
-          <a href="" className='btn'>Découvrez plus</a>
+          <div className="orphoninat__item-cta">
+            <h4>jzvefbqlb jqrbtreuaq </h4>
+            <a href="" className='btn'>Découvrez plus</a>
+          </div>
         </article>
+
         <article className="orpholinat__item">
           <div className="orpholinat__item-image">
             <img src={img1} alt="" />
           </div>
           <h3>Orphelinat du Grand Casablanca</h3>
-          <a href="" className='btn'>Découvrez plus</a>
+          <div className="orphoninat__item-cta">
+            <h4>jzvefbqlb jqrbtreuaq </h4>
+            <a href="" className='btn'>Découvrez plus</a>
+          </div>
         </article>
+
         <article className="orpholinat__item">
           <div className="orpholinat__item-image">
             <img src={img1} alt="" />
           </div>
           <h3>Orphelinat du Grand Casablanca</h3>
-          <a href="" className='btn'>Découvrez plus</a>
+          <div className="orphoninat__item-cta">
+            <h4>jzvefbqlb jqrbtreuaq </h4>
+            <a href="" className='btn'>Découvrez plus</a>
+          </div>
         </article>
+
         <article className="orpholinat__item">
           <div className="orpholinat__item-image">
             <img src={img1} alt="" />
           </div>
           <h3>Orphelinat du Grand Casablanca</h3>
-          <a href="" className='btn'>Découvrez plus</a>
+          <div className="orphoninat__item-cta">
+            <h4>jzvefbqlb jqrbtreuaq </h4>
+            <a href="" className='btn'>Découvrez plus</a>
+          </div>
         </article>
+
         <article className="orpholinat__item">
           <div className="orpholinat__item-image">
             <img src={img1} alt="" />
           </div>
           <h3>Orphelinat du Grand Casablanca</h3>
-          <a href="" className='btn'>Découvrez plus</a>
+          <div className="orphoninat__item-cta">
+            <h4>jzvefbqlb jqrbtreuaq </h4>
+            <a href="" className='btn'>Découvrez plus</a>
+          </div>
         </article>
+        
+        
       </div>
     </section>
   )

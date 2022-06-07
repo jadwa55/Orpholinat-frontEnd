@@ -7,9 +7,11 @@
 
 .orpholinat__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2.5rem;
-    /* align-items: center; */
+    align-items: center;
+    /* width: 60%; */
+    /* height: 50%; */
 }
 
 .orpholinat__item {
@@ -22,7 +24,13 @@
 
 .orpholinat__item:hover {
     border-color: var(--color-primary-variant);
-    background: transparent;
+    /* background: transparent; */
+    background: linear-gradient(
+        45deg,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
 }
 
 .orpholinat__item-image {
@@ -30,8 +38,14 @@
     overflow: hidden;
 }
 
-.orpholinat__item h3 {
+/* .orpholinat__item h3 {
     margin: 1.2rem 0 2rem;
+} */
+
+.orpholinat__item-cta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* ============================== MEDIA QUERIES (MEDIUM DEVICES) =================== */
