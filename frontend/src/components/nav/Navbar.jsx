@@ -16,6 +16,8 @@ const Navbar = () => {
       <a href="#experience"><BiBook/></a>
       <a href="#services"><RiServiceLine/></a>
       <a href="#contact"><BiMessageSquareDetail/></a>
+      <a href="#contact"><BiMessageSquareDetail/></a>
+      <a href="#contact"><BiMessageSquareDetail/></a>
     </nav>
   )
 }
