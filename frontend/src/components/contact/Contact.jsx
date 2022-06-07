@@ -2,9 +2,21 @@ import React from 'react'
 import './contact.css'
 import {MdOutlineEmail} from 'react-icons/md'
 import {RiMessengerLine} from 'react-icons/ri'
-import {BsWhatsapp} from 'react-icons/bs'
+import {BsWhatsapp} from 'react-icons/bs';
+import { useRef } from 'react';
+import emailjs from 'emailjs-com'
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_mefyb2v', 'template_gdjcusc', form.current, 'kpUrDh2fc7IL0gMAb')
+    
+    e.target.reset()
+  };
+
   return (
     <section id='contact'>
       <h5>ORPHOME</h5>
@@ -32,7 +44,7 @@ const Contact = () => {
           </article>
         </div>
         {/* END OF CONTACT OPTIONS  */}
-        <form action="">
+        <form ref={form} onSubmit={sendEmail}>
           <input type="text" name='name' placeholder='Nom et Prénom' required />
           <input type="email" name='emain' placeholder='Votre email' required />
           <textarea name="message" rows="7" placeholder='Ton message' required></textarea>
