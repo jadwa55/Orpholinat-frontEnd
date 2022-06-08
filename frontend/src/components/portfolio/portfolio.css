@@ -1,6 +1,6 @@
-#portfolio {
+/* #portfolio { */
     /* margin-top: 20%; */
-}
+/* } */
 
 
 
@@ -23,8 +23,8 @@
 }
 
 .orpholinat__item:hover {
-    border-color: var(--color-primary-variant);
-    /* background: transparent; */
+    /* border-color: var(--color-primary-variant); */
+    background: transparent;
     background: linear-gradient(
         45deg,
         transparent,

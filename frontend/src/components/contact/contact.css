@@ -3,6 +3,11 @@
     display: grid;
     grid-template-columns: 30% 58%;
     gap: 12%;
+   
+}
+
+#contact {
+    margin-top: 10%;
 }
 
 .contact__options {
