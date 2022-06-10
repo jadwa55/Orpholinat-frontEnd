@@ -57,3 +57,17 @@ exports.updateOrpholinat = async (req,res)=>{
     }
 }
 
+exports.deleteOrpholinat = async (req,res)=>{
+    try {
+        const id = req.params.id
+
+        const orpholinat = await Orpholinat.destroy({where: {id: id}})
+
+        res.status(200).json({
+            message: 'orpholinat deleted successfully'
+        })
+    } catch (error) {
+        res.send(error)
+        
+    }
+}
