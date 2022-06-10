@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import img from '../../images/girl.png'
+import img from '../../../images/girl.png'
 import {FiUsers} from 'react-icons/fi'
 
 const About = () => {
