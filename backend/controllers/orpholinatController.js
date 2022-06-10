@@ -38,3 +38,22 @@ exports.addOrpholinat = async (req,res)=>{
     }
 
 }
+
+
+exports.updateOrpholinat = async (req,res)=>{
+    try {
+        const id = req.params.id
+        const data = req.body
+
+        const orpholinat = await Orpholinat.update(data,{where: {id: id}})
+
+        res.status(200).json({
+            message: 'orpholinat updated successfully',
+            orpholinat: orpholinat
+        })
+    } catch (error) {
+        res.send(error)
+        
+    }
+}
+
