@@ -34,6 +34,12 @@ app.get("/", (req, res) => {
 
 
 
+//* Require Routes
+const orpholinatRouter = require('./routes/orpholinatRoute')
+
+
+// * Register Our Routes
+app.use("/api", orpholinatRouter)
 
 
 
