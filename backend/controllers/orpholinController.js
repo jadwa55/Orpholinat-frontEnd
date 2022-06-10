@@ -24,3 +24,25 @@ exports.createOrpholin = async (req, res) => {
         console.log(error);
       }
     };
+
+
+exports.findOrpholin = async (req, res) => {
+    try {
+    
+        const orpholin = await Orpholin.findAll();
+    
+        if (!orpholin) {
+            res.status(401).json({
+            message: "orpholin not found",
+            });
+        } else {
+            res.status(201).json({
+            message: "success",
+            orpholin:orpholin
+            });
+        }
+        } catch (error) {
+        res.status(401).send(error);
+        }
+    
+};
