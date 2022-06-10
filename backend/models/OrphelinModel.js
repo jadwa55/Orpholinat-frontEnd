@@ -43,11 +43,6 @@ Orpholin.init({
 
     situation: {
         type: DataTypes.STRING,
-    },
-
-    nombreOrpholin: {
-        type: DataTypes.INTEGER,
-        allowNull: false
     }
 },
 {
