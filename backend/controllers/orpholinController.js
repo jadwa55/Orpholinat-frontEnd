@@ -55,8 +55,23 @@ exports.updateOrpholin = async (req,res)=>{
         const orpholin = await Orpholin.update(data,{where: {id: id}})
 
         res.status(200).json({
-            message: 'orpholin updated successfully',
+            message: 'orpholin infos updated successfully',
             orpholin: orpholin
+        })
+    } catch (error) {
+        res.send(error)
+        
+    }
+}
+
+exports.deleteOrpholin = async (req,res)=>{
+    try {
+        const id = req.params.id
+
+        const orpholin = await Orpholin.destroy({where: {id: id}})
+
+        res.status(200).json({
+            message: 'orpholin deleted successfully'
         })
     } catch (error) {
         res.send(error)
