@@ -71,3 +71,25 @@ exports.deleteOrpholinat = async (req,res)=>{
         
     }
 }
+
+exports.getAllOrpholinat = async (req,res)=>{
+    try {
+        const orpholinat = await Orpholinat.findAll()
+
+        if(!orpholinat){
+            res.status(204).json({
+                message: 'no orpholinat found'
+            })
+        }
+
+        res.status(200).json({
+            message: 'success',
+            orpholinat: orpholinat
+        })
+
+        
+    } catch (error) {
+        res.send(error)
+        
+    }
+}
