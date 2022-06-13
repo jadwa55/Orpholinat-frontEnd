@@ -68,31 +68,46 @@ class Orpholinat extends React.Component {
 
   render() {
     console.log(this.state.infoorpholinat);
-    // info  orpholinat:::::::::::::::::::::::::::::::::::::::::
-    // let orpholinat = "";
-
-    // let src = "http://localhost:5500/" + orpholinat.image;
     return this?.state?.infoorpholinat?.map((d, index) => (
-      <div key={index} className="card box " style={{ maxWidth: "20rem" }}>
-        <a href="#" className="fas fa-heart" />
-        <img
-          className="card-img-top p-3"
-          src={"http://localhost:5500/" + d?.image}
-          height={"150px"}
-          alt="Card image cap"
-        />
-        <div className="card-body">
-          <h3 className="card-title">{d?.name}</h3>
-          <div className="stars">
-            <i className="fas fa-star" />
-            <i className="fas fa-star" />
-            <i className="fas fa-star" />
-            <i className="fas fa-star" />
-            <i className="fas fa-star-half-alt" />
-          </div>
-        </div>
-      </div>
+      <div key={index} className="card box ">
+
+
+          {/* <section id='portfolio'> */}
+
+            <h5>Nos Orphelinats</h5>
+
+            <div className="container orpholinat__container">
+              <article className="orpholinat__item">
+                <div className="orpholinat__item-image">
+                  <img className="card-img-top p-3"
+                  src={"http://localhost:5500/" + d?.image}
+                  />
+                </div>
+                <h3 className="card-title">{d?.name}</h3>
+                <div className="orphoninat__item-cta">
+                  <h4>jzvefbqlb jqrbtreuaq </h4>
+                  <a href="" className='btn'>Découvrez plus</a>
+                </div>
+              </article>
+            </div>
+
+          {/* </section> */}
+
+
+      </div> 
+
     ));
+
+
+
+
+
+
+
+
+
+
+    
   }
 }
 
