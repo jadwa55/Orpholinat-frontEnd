@@ -8,7 +8,7 @@ class Navbar extends React.Component {
 <div className="app-header header-shadow">
   <div className="app-header__logo">
     {/* <div className="logo-src" /> */}
-    <div>RESTAU MARHABA</div>
+    <div>Orphome</div>
     <div className="header__pane ml-auto">
       <div>
         <button type="button" className="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">

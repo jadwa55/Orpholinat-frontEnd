@@ -1,82 +1,111 @@
 import React from "react";
 
 
-class Navbar extends React.Component {
+class Siderbar extends React.Component {
   render() {
     return (
+
+  <div className="app-sidebar sidebar-shadow">
+    <div className="app-header__logo">
+      <div className="logo-src" />
+      <div className="header__pane ml-auto">
         <div>
-<div className="app-header header-shadow">
-  <div className="app-header__logo">
-    {/* <div className="logo-src" /> */}
-    <div>RESTAU MARHABA</div>
-    <div className="header__pane ml-auto">
+          <button type="button" className="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+            <span className="hamburger-box">
+              <span className="hamburger-inner" />
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div className="app-header__mobile-menu">
       <div>
-        <button type="button" className="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+        <button type="button" className="hamburger hamburger--elastic mobile-toggle-nav">
           <span className="hamburger-box">
             <span className="hamburger-inner" />
           </span>
         </button>
       </div>
     </div>
-  </div>
-  <div className="app-header__mobile-menu">
-    <div>
-      <button type="button" className="hamburger hamburger--elastic mobile-toggle-nav">
-        <span className="hamburger-box">
-          <span className="hamburger-inner" />
-        </span>
-      </button>
-    </div>
-  </div>
-  <div className="app-header__menu">
-    <span>
-      <button type="button" className="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-        <span className="btn-icon-wrapper">
-          <i className="fa fa-ellipsis-v fa-w-6" />
-        </span>
-      </button>
-    </span>
-  </div>    <div className="app-header__content">
-    <div className="app-header-left">
-      <div className="search-wrapper">
-        <div className="input-holder">
-          <input type="text" className="search-input" placeholder="Type to search" />
-          <button className="search-icon"><span /></button>
-        </div>
-        <button className="close" />
-      </div>      
-    </div>
-    <div className="app-header-right">
-      <div className="header-btn-lg pr-0">
-        <div className="widget-content p-0">
-          <div className="widget-content-wrapper">
-            <div className="widget-content-left">
-              <div className="btn-group">
-                <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="p-0 btn">
-                  <i className="fa fa-angle-down ml-2 opacity-8" />
-                </a>
-                <div tabIndex={-1} role="menu" aria-hidden="true" className="dropdown-menu dropdown-menu-right">
-                  <button type="button" tabIndex={0} className="dropdown-item">User Account</button>
-                  <button type="button" tabIndex={0} className="dropdown-item">Settings</button>
-                  <h6 tabIndex={-1} className="dropdown-header">Header</h6>
-                  <button type="button" tabIndex={0} className="dropdown-item">Actions</button>
-                  <div tabIndex={-1} className="dropdown-divider" />
-                  <button type="button" tabIndex={0} className="dropdown-item">Dividers</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>      </div>
-    </div>
-  </div>      
-</div>
+    <div className="app-header__menu">
+      <span>
+        <button type="button" className="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+          <span className="btn-icon-wrapper">
+            <i className="fa fa-ellipsis-v fa-w-6" />
+          </span>
+        </button>
+      </span>
+    </div>    <div className="scrollbar-sidebar">
+      <div className="app-sidebar__inner">
+        <ul className="vertical-nav-menu">
+          <li className="app-sidebar__heading">Dashboards</li>
+          <li>
+            <a href="" className="mm-active text-decoration-none">
+              <i className="metismenu-icon pe-7s-science" />
+              <i className="fas fa-burger-soda"></i>
+              ORPHOME
+            </a>
+          </li>
+          <li className="app-sidebar__heading">Services</li>
+          <li>
+            <a className="text-decoration-none" href="#">
+              <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
+             Orpholinats
+              <i className=" metismenu-icon pe-7s-users" />
+            </a>
+            <ul>
+             
+              <li>
+                <a  className="text-decoration-none" href="">
+                  <i className="metismenu-icon">
+                  </i>All Orpholinats
 
- 
-</div>
+                </a>
+              </li>
+              <li>
+                <a  className="text-decoration-none" href="">
+                  <i className="metismenu-icon">
+                  </i>Add orpholinat
+
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+            <li>
+              <a className="text-decoration-none" href="#">
+                <i className="metismenu-icon pe-7s-note2" />
+                Orpholins
+                <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
+              </a>
+              <ul>
+              
+                <li>
+                  <a  className="text-decoration-none" href="/dashboard/category">
+                    <i className="metismenu-icon">
+                    </i>All Orpholins
+                  </a>
+                </li>
+                <li>
+                  <a  className="text-decoration-none" href="/dashboard/category/create">
+                    <i className="metismenu-icon">
+                    </i>Add an Orpholin
+                  </a>
+                </li>
+                
+              </ul>
+            </li>
+          
+         
+        </ul>
+      </div>
+    </div>
+  </div>  
+
 
 
     );
   }
 }
 
-export default Navbar;
+export default Siderbar;

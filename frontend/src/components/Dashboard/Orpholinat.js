@@ -102,30 +102,6 @@ class Orpholinat extends React.Component {
     }
 
     // update :::::::::::::::::::::::::::::::::::::::::
-    let updateForm = "";
-
-    if (!this.state.pandingupdate) {
-        updateForm = (
-          <div className='container '>
-            <div className=' card text-white bg-muted 'style={{maxWidth: '100rem'}} >
-            <div className="card-header text-dark">Update</div>
-            <div className="card-body">
-            <div>
-              <form onSubmit={this.handleSubmit} enctype="multipart/form-data">
-                <div class="mb-3">
-                    <label for="exampleInputType1" class="form-label">Type</label>
-                    <input type="text" value={this.state.newName ?? this.state.infopdate.name}  onChange={this.handleType}class="form-control" id="exampleInputType1" />
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </div>
-            </div>
-            </div>
-          </div>
-            
-        );
-    }
-
     //  info products :::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -188,7 +164,6 @@ class Orpholinat extends React.Component {
     </div>
   </div>
   </div>
-     {updateForm}
      
     </div>
  
