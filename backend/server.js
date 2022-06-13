@@ -8,7 +8,7 @@ const app = express();
 
 const dotenv = require('dotenv').config();
 var corsOptions = {
-  origin: "http://localhost:8080"
+  origin: "http://localhost:3000"
 };
 
 
@@ -40,7 +40,7 @@ const orpholinRouter = require('./routes/orpholinRoute')
 
 
 // * Register Our Routes
-app.use("/api", orpholinatRouter)
+app.use("/api/orpholinat", orpholinatRouter)
 app.use("/api",orpholinRouter)
 
 
@@ -48,7 +48,7 @@ app.use("/api",orpholinRouter)
 
 
   // set port, listen for requests
-  const PORT = process.env.PORT || 8080;
+  const PORT = process.env.PORT || 5500;
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
   })

@@ -1,5 +1,6 @@
 const Orpholinat = require('../models/OrpholinatModel')
 const multer = require('multer')
+const { response } = require('express')
 
 
 const storage = multer.diskStorage({
@@ -76,20 +77,22 @@ exports.getAllOrpholinat = async (req,res)=>{
     try {
         const orpholinat = await Orpholinat.findAll()
 
-        if(!orpholinat){
-            res.status(204).json({
+        if(orpholinat.length==0){
+            return res.status(200).json({
+                
                 message: 'no orpholinat found'
             })
         }
 
-        res.status(200).json({
+        return res.status(200).json({
             message: 'success',
             orpholinat: orpholinat
         })
 
         
     } catch (error) {
-        res.send(error)
+        return res.json(error)
         
     }
+    // return res.json('ba3bola')
 }
