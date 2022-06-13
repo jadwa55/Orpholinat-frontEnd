@@ -51,7 +51,7 @@ class Siderbar extends React.Component {
             <a className="text-decoration-none" href="#">
               <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
              Orpholinats
-              <i className=" metismenu-icon pe-7s-users" />
+              <i className=" metismenu-icon pe-7s-note2" />
             </a>
             <ul>
              
@@ -71,10 +71,10 @@ class Siderbar extends React.Component {
               </li>
             </ul>
           </li>
-          
+
             <li>
               <a className="text-decoration-none" href="#">
-                <i className="metismenu-icon pe-7s-note2" />
+                <i className="metismenu-icon pe-7s-users" />
                 Orpholins
                 <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
               </a>

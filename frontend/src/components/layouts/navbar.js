@@ -55,14 +55,6 @@ class Navbar extends React.Component {
                 <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="p-0 btn">
                   <i className="fa fa-angle-down ml-2 opacity-8" />
                 </a>
-                <div tabIndex={-1} role="menu" aria-hidden="true" className="dropdown-menu dropdown-menu-right">
-                  <button type="button" tabIndex={0} className="dropdown-item">User Account</button>
-                  <button type="button" tabIndex={0} className="dropdown-item">Settings</button>
-                  <h6 tabIndex={-1} className="dropdown-header">Header</h6>
-                  <button type="button" tabIndex={0} className="dropdown-item">Actions</button>
-                  <div tabIndex={-1} className="dropdown-divider" />
-                  <button type="button" tabIndex={0} className="dropdown-item">Dividers</button>
-                </div>
               </div>
             </div>
           </div>
