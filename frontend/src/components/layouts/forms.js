@@ -7,7 +7,7 @@ class Forms extends React.Component {
  
         <div className='container'>
         <div className=' card text-white bg-success 'style={{maxWidth: '100rem'}} >
-       <div className="card-header">Create Category</div>
+       <div className="card-header">Add an orpholinat</div>
        <div className="card-body">
        <div>
                      <form >
