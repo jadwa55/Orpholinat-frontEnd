@@ -16,9 +16,7 @@ class Orpholinat extends React.Component {
     super(props);
     this.state = {
       infoorpholinat: [],
-      panding: true,
-      infouproducts: {},
-      pandingproducts: true,
+      panding: true,  
       show: false,
       fullscreen: false,
       newname: null,
@@ -36,7 +34,7 @@ class Orpholinat extends React.Component {
     this.handleTelephone = this.handleTelephone.bind(this);
     this.handleImage = this.handleImage.bind(this);
     this.handleDescription = this.handleDescription.bind(this);
-    this.handleNombreOrpholin = this.handlenombreOrpholin.bind(this);
+    this.handleNombreOrpholin = this.handleNombreOrpholin.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -48,6 +46,7 @@ class Orpholinat extends React.Component {
     this.setState({ show: !this.state.show });
     this.setState({ fullscreen: !this.state.fullscreen });
   };
+
   async infoOrpholinat() {
     try {
       let res = await getAllOrpholinat(); // get axios promise
@@ -77,7 +76,7 @@ class Orpholinat extends React.Component {
       let deleteorpholinat = await deleteOrpholinat(id);
       console.log("deleteButton:", deleteorpholinat);
       alert("orpholinat is deleted!");
-      // window.location = "/dashboard/category";
+      window.location = "/OrpholinatDash";
     } catch (e) {
       console.error(e);
       handelCatchInAxios(e);
@@ -93,9 +92,6 @@ class Orpholinat extends React.Component {
   }
   handleCity(event) {
     this.setState({ newcity: event.target.value });
-  }
-  handleName(event) {
-    this.setState({ newname: event.target.value });
   }
   handleTelephone(event) {
       this.setState({ newtelephone: event.target.value });
@@ -163,7 +159,7 @@ class Orpholinat extends React.Component {
             </td>
 
             <td className="text-center">
-              <img className="card-img-top p-3"
+              <img className="card-img-top p-3" height={80}
                   src={"http://localhost:5500/" + d?.image}
               />
             </td>
@@ -202,60 +198,60 @@ class Orpholinat extends React.Component {
     }
 
     // update :::::::::::::::::::::::::::::::::::::::::
-    let updateForm = "";
 
-    if (!this.state.pandingupdate) {
-        updateForm = (
-          <div className='container '>
-            <div className=' card text-white bg-muted 'style={{maxWidth: '100rem'}} >
-              <div className="card-header text-dark">Update orpholinat infos</div>
-              <div className="card-body">
-                <div>
-                  <form onSubmit={this.handleSubmit} enctype="multipart/form-data">
-                    <div class="mb-3">
-                      <label for="exampleInputName1" class="form-label">Name</label>
-                      <input type="text" value={this.state.newname ?? this.state.infopdate.name}  onChange={this.handleName}class="form-control" id="exampleInputName1" />
-                    </div>
+    // let updateForm = "";
 
-                    <div class="mb-3">
-                      <label for="exampleInputAddress1" class="form-label">Address</label>
-                      <input type="text" value={this.state.newaddress ?? this.state.infopdate.address}  onChange={this.handleAddress}class="form-control" id="exampleInputAddress1" />
-                    </div>
+    // if (!this.state.pandingupdate) {
+    //     updateForm = (
+    //       <div className='container '>
+    //         <div className=' card text-white bg-muted 'style={{maxWidth: '100rem'}} >
+    //           <div className="card-header text-dark">Update orpholinat infos</div>
+    //           <div className="card-body">
+    //             <div>
+    //               <form onSubmit={this.handleSubmit} enctype="multipart/form-data">
+    //                 <div class="mb-3">
+    //                   <label for="exampleInputName1" class="form-label">Name</label>
+    //                   <input type="text" value={this.state.newname ?? this.state.infopdate.name}  onChange={this.handleName}class="form-control" id="exampleInputName1" />
+    //                 </div>
 
-                    <div class="mb-3">
-                      <label for="exampleInputCity1" class="form-label">City</label>
-                      <input type="text" value={this.state.newcity ?? this.state.infopdate.city}  onChange={this.handleCity}class="form-control" id="exampleInputCity1" />
-                    </div>
+    //                 <div class="mb-3">
+    //                   <label for="exampleInputAddress1" class="form-label">Address</label>
+    //                   <input type="text" value={this.state.newaddress ?? this.state.infopdate.address}  onChange={this.handleAddress}class="form-control" id="exampleInputAddress1" />
+    //                 </div>
 
-                    <div class="mb-3">
-                      <label for="exampleInputTelephone1" class="form-label">Telephone</label>
-                      <input type="number" value={this.state.newtelephone ?? this.state.infopdate.telephone}  onChange={this.handleTelephone}class="form-control" id="exampleInputTelephone1" />
-                    </div>
+    //                 <div class="mb-3">
+    //                   <label for="exampleInputCity1" class="form-label">City</label>
+    //                   <input type="text" value={this.state.newcity ?? this.state.infopdate.city}  onChange={this.handleCity}class="form-control" id="exampleInputCity1" />
+    //                 </div>
 
-                    <div class="mb-3">
-                      <label for="exampleInputImage1" class="form-label">Image</label>
-                      <input type="file" value={this.state.newimage ?? this.state.infopdate.image}  onChange={this.handleImage}class="form-control" id="exampleInputImage1" />
-                    </div>
+    //                 <div class="mb-3">
+    //                   <label for="exampleInputTelephone1" class="form-label">Telephone</label>
+    //                   <input type="number" value={this.state.newtelephone ?? this.state.infopdate.telephone}  onChange={this.handleTelephone}class="form-control" id="exampleInputTelephone1" />
+    //                 </div>
+
+    //                 <div class="mb-3">
+    //                   <label for="exampleInputImage1" class="form-label">Image</label>
+    //                   <input type="file" value={this.state.newimage ?? this.state.infopdate.image}  onChange={this.handleImage}class="form-control" id="exampleInputImage1" />
+    //                 </div>
                            
-                    <div class="mb-3">
-                        <label for="exampleInputDescription1" class="form-label">Description</label>
-                        <input type="text" value={this.state.newdescription ?? this.state.infopdate.description}  onChange={this.handleDescription}class="form-control" id="exampleInputDescription1" />
-                    </div>
+    //                 <div class="mb-3">
+    //                     <label for="exampleInputDescription1" class="form-label">Description</label>
+    //                     <input type="text" value={this.state.newdescription ?? this.state.infopdate.description}  onChange={this.handleDescription}class="form-control" id="exampleInputDescription1" />
+    //                 </div>
 
-                    <div class="mb-3">
-                        <label for="exampleInputNombreOrpholin1" class="form-label">NombreOrpholin</label>
-                        <input type="number" value={this.state.newnombreOrpholin ?? this.state.infopdate.nombreOrpholin}  onChange={this.handleNombreOrpholin}class="form-control" id="exampleInputNombreOrpholin1" />
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
+    //                 <div class="mb-3">
+    //                     <label for="exampleInputNombreOrpholin1" class="form-label">NombreOrpholin</label>
+    //                     <input type="number" value={this.state.newnombreOrpholin ?? this.state.infopdate.nombreOrpholin}  onChange={this.handleNombreOrpholin}class="form-control" id="exampleInputNombreOrpholin1" />
+    //                 </div>
+    //                 <button type="submit" class="btn btn-primary">Submit</button>
+    //               </form>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
             
-        );
-    }
-
+    //     );
+    // }
 
     // update ::::::::::::::::::::::::::::::::::::::::::::::::
     return (
@@ -285,7 +281,7 @@ class Orpholinat extends React.Component {
                           <span className="btn-icon-wrapper pr-2 opacity-7">
                           <i class="fas fa-plus-circle"></i>
                           </span>
-                          <a   className="text-decoration-none text-white" href='/CreateHorpholinat'>Add an orpholinat</a>
+                          <a   className="text-decoration-none text-white" href='/CreateOrpholinat'>Add an orpholinat</a>
                         </button>
                       </div>
                     </div>  

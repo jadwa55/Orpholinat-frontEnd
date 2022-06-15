@@ -28,9 +28,9 @@ export function getAllOrpholinat() {
     return axios.post(APP_URL + "orpholinat/create", formData);
   }
   
-  export function updateOrpholinat(id, name) {
+  export function updateOrpholinat(id, name, address, city, telephone, image, description, nombreOrpholin) {
     console.log('Orpholinat updating');
-    return axios.post(APP_URL + "orpholinat/update/" + id, { name: name });
+    return axios.post(APP_URL + "orpholinat/update/" + id, { name: name, address: address, city: city, telephone: telephone, image: image, description: description, nombreOrpholin: nombreOrpholin });
   }
   
   export function deleteOrpholinat(id) {

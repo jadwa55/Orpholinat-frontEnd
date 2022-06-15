@@ -1,20 +1,53 @@
 import React from "react";
 import "./orpholinat.css";
+
+// import Navbar from './../../components/HomePage/header/Header';
 import {
   getAllOrpholinat,
-  getOrpholinat,
 } from "./../../../src/services/OrpholinatService";
 import { handelCatchInAxios } from "../../services/AxiosCatchService";
 
-class Orpholinat extends React.Component {
 
+class Orpholinat extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      infoorpholinat: [],
+      panding: true,  
+      show: false,
+      fullscreen: false,
+    };
+  }
+
+  componentWillMount() {
+    this.infoOrpholinat();
+  }
+
+  showModal = () => {
+    this.setState({ show: !this.state.show });
+    this.setState({ fullscreen: !this.state.fullscreen });
+  };
+
+  async infoOrpholinat() {
+    try {
+      let res = await getAllOrpholinat(); // get axios promise
+      let data = res.data.orpholinat;
+      console.log("ALL orpholinats :", data);
+      // get all data from pomise
+      this.setState({ infoorpholinat: data }); // Set data to state
+      this.setState({ panding: false }); // Change status panding for render data
+    } catch (e) {
+      console.error(e);
+    }
+  }
+  
   render() {
     console.log(this.state.infoorpholinat);
     return this?.state?.infoorpholinat?.map((d, index) => (
       <div key={index} className="card box ">
 
-
-          {/* <section id='portfolio'> */}
+{/* <Navbar /> */}
+          <section id='portfolio'>
 
             <h5>Nos Orphelinats</h5>
 
@@ -33,23 +66,12 @@ class Orpholinat extends React.Component {
               </article>
             </div>
 
-          {/* </section> */}
+          </section>
 
 
       </div> 
 
     ));
-
-
-
-
-
-
-
-
-
-
-    
   }
 }
 
