@@ -1,4 +1,3 @@
-
 const express = require("express");
 const cors = require("cors"); //cors provides Express middleware to enable CORS
 const bodyParser = require("body-parser");
@@ -12,7 +11,8 @@ var corsOptions = {
 };
 
 
-
+app.use(express.static('public')); 
+app.use('/', express.static('uploads'));
 
 //* the will let us get data the data form post
 app.use(cors(corsOptions));
