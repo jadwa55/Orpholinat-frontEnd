@@ -2,8 +2,15 @@
     /* margin-top: 20%; */
 /* } */
 
-
-
+.vh{
+min-height: 100vh;
+padding-bottom: 10%;
+}
+.page-title{
+    font-size:3rem;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+}
 
 .orpholinat__container {
     display: grid;

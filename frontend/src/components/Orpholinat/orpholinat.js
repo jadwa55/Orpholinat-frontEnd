@@ -1,6 +1,6 @@
 import React from "react";
 import "./orpholinat.css";
-
+import Header from '../../components/HomePage/header/Header';
 // import Navbar from './../../components/HomePage/header/Header';
 import {
   getAllOrpholinat,
@@ -40,19 +40,10 @@ class Orpholinat extends React.Component {
       console.error(e);
     }
   }
-  
-  render() {
-    console.log(this.state.infoorpholinat);
+
+  getCards(){
     return this?.state?.infoorpholinat?.map((d, index) => (
-      <div key={index} className="card box ">
-
-{/* <Navbar /> */}
-          <section id='portfolio'>
-
-            <h5>Nos Orphelinats</h5>
-
-            <div className="container orpholinat__container">
-              <article className="orpholinat__item">
+              <article key={index} className="orpholinat__item">
                 <div className="orpholinat__item-image">
                   <img className="card-img-top p-3"
                   src={"http://localhost:5500/" + d?.image}
@@ -60,18 +51,27 @@ class Orpholinat extends React.Component {
                 </div>
                 <h3 className="card-title">{d?.name}</h3>
                 <div className="orphoninat__item-cta">
-                  <h4>jzvefbqlb jqrbtreuaq </h4>
+                  <h4>{d?.city} </h4>
                   <a href="" className='btn'>Découvrez plus</a>
                 </div>
               </article>
-            </div>
-
-          </section>
-
-
-      </div> 
-
-    ));
+    ))
+  }
+  
+  render() {
+    return (
+      <div>
+        <Header />
+        <div className="card box ">
+            <section id='portfolio' className="vh">
+              <h5 className="page-title">Nos Orphelinats</h5>
+              <div className="container orpholinat__container">
+                { this.getCards() }
+              </div>
+            </section>
+        </div> 
+      </div>
+    );
   }
 }
 

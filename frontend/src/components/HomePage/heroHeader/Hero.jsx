@@ -4,7 +4,7 @@ import COVER from '../../../images/cover.png'
 export default class HeroHeader extends React.Component{
     render(){
         return(
-           <div className="hero-header">
+           <div className="hero-header" style={{ backgroundImage:`url(${COVER})` }}>
                 <div className="content">
                     <div className="">
                         <span className="slug">L'autre maison pour nos enfants</span>

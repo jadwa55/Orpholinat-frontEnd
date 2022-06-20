@@ -84,7 +84,7 @@ header  nav{
     margin: unset;
     
   }
-  header nav ul li.active:after{
+  header nav ul li a.active:after{
     content: '';
     position: absolute;
     width: 100%;
@@ -93,13 +93,17 @@ header  nav{
     overflow: hidden;
     bottom: 0;
     clip-path: ellipse(45% 50% at 50% 100%);
-    background-color: var(--color-primary);
+    background-color: var(--color-bg-variant);
   }
   header nav ul li {
     display: inline-block;
     position: relative;
   }
   header nav ul li a {
+    background: unset !important;
+    border-radius: unset;
+    font-weight: 600;
+    color: var(--color-bg-variant) !important;
     margin: unset;
     padding: 16px 8px;
     text-decoration:none;
@@ -119,7 +123,7 @@ header  nav{
     font-size: min(3vw,1.5rem);
     font-weight: 900;
     text-transform: uppercase;
-    color: var(--color-primary);
+    color: var(--color-bg-variant);
   }
 
 

@@ -1,67 +1,56 @@
-/* #portfolio { */
-    /* margin-top: 20%; */
-/* } */
+#portfolio {
+    height: fit-content;
+    max-height: unset;
+}
+#portfolio h2{
+    color: var(--color-bg-variant);
+    font-weight: bolder;
+}
+#portfolio h5{
+    color:var(--color-bg-variant);
+}
+#portfolio .orpholinat__item{
+    transition: .3s ease-in-out;
+}
+#portfolio .orpholinat__item:hover{
+    background-color: var(--color-bg-variant);
+    transform: scale(1.01);
+    box-shadow: 0 8 16px rgba(0,0,0,0.5);
+}
+#portfolio .orpholinat__item h3{
+    margin-bottom: 20px;
+    color: var(--color-white);
+}
+#portfolio .orpholinat__item .orphoninat__item-cta h4{
+    color: var(--color-white);
+    font-size: 1rem;
+}
+#portfolio .orpholinat__item .orphoninat__item-cta a.btn:hover{
+    background-color: var(--color-primary);
+    color: var(--color-white);
 
-
-
-
-.orpholinat__container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2.5rem;
-    align-items: center;
-    /* width: 60%; */
-    /* height: 50%; */
+}
+#portfolio .orpholinat__item .orphoninat__item-cta a.btn{
+    color:var(--color-bg-variant);
+    display: block;
+    background: var(--color-white);
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+#portfolio .orpholinat__container{
+ grid-template-columns: 1fr 1fr 1fr;
 }
 
-.orpholinat__item {
-    background: var(--color-bg-variant);
-    padding: 1.3rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-    transition: var(--transition);
-}
-
-.orpholinat__item:hover {
-    /* border-color: var(--color-primary-variant); */
-    background: transparent;
-    background: linear-gradient(
-        45deg,
-        transparent,
-        var(--color-primary),
-        transparent
-    );
-}
-
-.orpholinat__item-image {
-    border-radius: 1.5rem;
-    overflow: hidden;
-}
-
-/* .orpholinat__item h3 {
-    margin: 1.2rem 0 2rem;
-} */
-
-.orpholinat__item-cta {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-/* ============================== MEDIA QUERIES (MEDIUM DEVICES) =================== */
-@media screen and (max-width: 1024px) {
-    .orpholinat__container{
-        grid-template-columns: 1fr 1fr;
-        gap: 1.2rem;
+@media screen and (max-width:600px){
+    #portfolio{
+        margin-top: 50px !important;
+        height: fit-content;
+        max-height: unset;
     }
-}
-  /* ============================== MEDIA QUERIES (SMALL DEVICES) =================== */
-  @media screen and (max-width: 600px) {
-    .orpholinat__container {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-    #portfolio {
-        margin-top: 80%;
+    #portfolio .orpholinat__container{
+        grid-template-columns: 1fr;
     }
 }

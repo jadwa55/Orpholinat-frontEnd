@@ -1,4 +1,11 @@
-.container.contact__container {
+#contact h5{
+    color: var(--color-bg-variant);
+}
+#contact h2{
+    color: var(--color-bg-variant);
+    font-weight: bolder;
+}
+#contact .container.contact__container {
     width: 58%;
     display: grid;
     grid-template-columns: 30% 58%;
@@ -6,36 +13,32 @@
    
 }
 
-#contact {
-    margin-top: 10%;
-}
 
-.contact__options {
+#contact .contact__options {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
-.contact__option {
-    background: var(--color-primay-variant);
+#contact .contact__option {
+    background: var(--color-bg-variant);
+    color: var(--color-white);
     padding: 1.2rem;
     border-radius: 1.2rem;
     text-align: center;
     border: 1px solid transparent;
     transition: var(--transition);
 }
+#contact .contact__option a{
+    color: var(--color-white);
+}
 
-/* .contact__option:hover {
-    background: transparent;
-    border-color: var(--color-primay-variant);
-} */
-
-.contact__option-icon {
+#contact .contact__option-icon {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-.contact__option a {
+#contact .contact__option a {
     margin-top: 0.7rem;
     display: inline-block;
     font-size: 0.8rem;
@@ -43,18 +46,59 @@
 
 /* ===================================== FORM ======================================= */
 
-form {
+#contact form {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
-input, textarea {
+#contact input,#contact textarea {
     width: 100%;
     padding: 1.5rem;
     border-radius: 0.5rem;
     /* background: transparent; */
-    border: 2px solid var(--color-primay-variant);
+    border: 2px solid var(--color-bg-variant);
     /* resize: none; */
     /* color: var(--color-white); */
+}
+#contact .btn{
+    margin-left:auto;
+}
+
+@media screen and (max-width:600px){
+    #contact .container.contact__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    #contact .contact__options {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    #contact .contact__option {
+        background: var(--color-bg-variant);
+        color: var(--color-white);
+        padding: 1.2rem;
+        border-radius: 1.2rem;
+        text-align: center;
+        border: 1px solid transparent;
+    }
+    #contact .contact__option h5{
+        color: var(--color-white);
+    }
+    #contact .contact__option a{
+        color: var(--color-white);
+    }
+    #contact .contact__option-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    #contact .btn{
+        width: 100%;
+        margin-bottom:  8rem;
+        padding: .7rem;
+        border-radius: 8px;
+    }
 }

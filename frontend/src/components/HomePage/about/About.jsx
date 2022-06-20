@@ -1,15 +1,15 @@
 import React from 'react'
-import './about.css'
+import './about.css';
 import img from '../../../images/girl.png'
 import {FiUsers} from 'react-icons/fi'
 
 const About = () => {
   return (
-    <section id='about'>
-      <h5>A propos de nous </h5>
+    <section id="about">
+      <h5>A propos de nous</h5>
       <h2>Qui somme nous?</h2>
 
-      <div className=".container about__container">
+      <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
             <img src={img} alt="" />
