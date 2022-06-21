@@ -52,7 +52,7 @@ class Orpholinat extends React.Component {
                 <h3 className="card-title">{d?.name}</h3>
                 <div className="orphoninat__item-cta">
                   <h4>{d?.city} </h4>
-                  <a href="" className='btn'>Découvrez plus</a>
+                  <a href="/OrpholinatDetail" className='btn'>Découvrez plus</a>
                 </div>
               </article>
     ))
