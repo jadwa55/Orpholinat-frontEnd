@@ -33,6 +33,21 @@ const OrpholinatDetail = () => {
                 </div>
             </div>
         </div>
+        <div>
+        <article className="orpholinat__item">
+            
+                <div className="orpholinat__item-image">
+                  <img className="card-img-top p-3"
+                  src={img}
+                  />
+                </div>
+                <h3 className="card-title">AZERTYUI</h3>
+                <div className="orphoninat__item-cta">
+                  <h4>SDFGHJKL</h4>
+                  {/* <a href="/OrpholinatDetail" className='btn'>Découvrez plus</a> */}
+                </div>
+              </article>
+        </div>
 
         
         
