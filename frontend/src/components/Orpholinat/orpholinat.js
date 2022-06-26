@@ -32,7 +32,7 @@ class Orpholinat extends React.Component {
     try {
       let res = await getAllOrpholinat(); // get axios promise
       let data = res.data.orpholinat;
-      console.log("ALL orpholinats :", data);
+      console.log("ALL orpholinats :", res);
       // get all data from pomise
       this.setState({ infoorpholinat: data }); // Set data to state
       this.setState({ panding: false }); // Change status panding for render data
@@ -66,6 +66,8 @@ class Orpholinat extends React.Component {
             <section id='portfolio' className="vh">
               <h5 className="page-title">Nos Orphelinats</h5>
               <div className="container orpholinat__container">
+                { this.getCards() }
+                { this.getCards() }
                 { this.getCards() }
               </div>
             </section>

@@ -185,7 +185,7 @@ class Orpholinat extends React.Component {
             </td>
 
             <td className="text-center">
-              <div className=" btn btn-warning btn-sm"onClick={() => ThisClass.editButton(d.id)} > <i class="fas fa-edit"></i> update</div>
+              <div className=" btn btn-warning btn-sm" onClick={() => ThisClass.editButton(d.id)} > <i className="fas fa-edit"></i> update</div>
             </td>
 
             <td className="text-center">
@@ -209,41 +209,41 @@ class Orpholinat extends React.Component {
     //           <div className="card-body">
     //             <div>
     //               <form onSubmit={this.handleSubmit} enctype="multipart/form-data">
-    //                 <div class="mb-3">
-    //                   <label for="exampleInputName1" class="form-label">Name</label>
-    //                   <input type="text" value={this.state.newname ?? this.state.infopdate.name}  onChange={this.handleName}class="form-control" id="exampleInputName1" />
+    //                 <div className="mb-3">
+    //                   <label for="exampleInputName1" className="form-label">Name</label>
+    //                   <input type="text" value={this.state.newname ?? this.state.infopdate.name}  onChange={this.handleName}className="form-control" id="exampleInputName1" />
     //                 </div>
 
-    //                 <div class="mb-3">
-    //                   <label for="exampleInputAddress1" class="form-label">Address</label>
-    //                   <input type="text" value={this.state.newaddress ?? this.state.infopdate.address}  onChange={this.handleAddress}class="form-control" id="exampleInputAddress1" />
+    //                 <div className="mb-3">
+    //                   <label for="exampleInputAddress1" className="form-label">Address</label>
+    //                   <input type="text" value={this.state.newaddress ?? this.state.infopdate.address}  onChange={this.handleAddress}className="form-control" id="exampleInputAddress1" />
     //                 </div>
 
-    //                 <div class="mb-3">
-    //                   <label for="exampleInputCity1" class="form-label">City</label>
-    //                   <input type="text" value={this.state.newcity ?? this.state.infopdate.city}  onChange={this.handleCity}class="form-control" id="exampleInputCity1" />
+    //                 <div className="mb-3">
+    //                   <label for="exampleInputCity1" className="form-label">City</label>
+    //                   <input type="text" value={this.state.newcity ?? this.state.infopdate.city}  onChange={this.handleCity}className="form-control" id="exampleInputCity1" />
     //                 </div>
 
-    //                 <div class="mb-3">
-    //                   <label for="exampleInputTelephone1" class="form-label">Telephone</label>
-    //                   <input type="number" value={this.state.newtelephone ?? this.state.infopdate.telephone}  onChange={this.handleTelephone}class="form-control" id="exampleInputTelephone1" />
+    //                 <div className="mb-3">
+    //                   <label for="exampleInputTelephone1" className="form-label">Telephone</label>
+    //                   <input type="number" value={this.state.newtelephone ?? this.state.infopdate.telephone}  onChange={this.handleTelephone}className="form-control" id="exampleInputTelephone1" />
     //                 </div>
 
-    //                 <div class="mb-3">
-    //                   <label for="exampleInputImage1" class="form-label">Image</label>
-    //                   <input type="file" value={this.state.newimage ?? this.state.infopdate.image}  onChange={this.handleImage}class="form-control" id="exampleInputImage1" />
+    //                 <div className="mb-3">
+    //                   <label for="exampleInputImage1" className="form-label">Image</label>
+    //                   <input type="file" value={this.state.newimage ?? this.state.infopdate.image}  onChange={this.handleImage}className="form-control" id="exampleInputImage1" />
     //                 </div>
                            
-    //                 <div class="mb-3">
-    //                     <label for="exampleInputDescription1" class="form-label">Description</label>
-    //                     <input type="text" value={this.state.newdescription ?? this.state.infopdate.description}  onChange={this.handleDescription}class="form-control" id="exampleInputDescription1" />
+    //                 <div className="mb-3">
+    //                     <label for="exampleInputDescription1" className="form-label">Description</label>
+    //                     <input type="text" value={this.state.newdescription ?? this.state.infopdate.description}  onChange={this.handleDescription}className="form-control" id="exampleInputDescription1" />
     //                 </div>
 
-    //                 <div class="mb-3">
-    //                     <label for="exampleInputNombreOrpholin1" class="form-label">NombreOrpholin</label>
-    //                     <input type="number" value={this.state.newnombreOrpholin ?? this.state.infopdate.nombreOrpholin}  onChange={this.handleNombreOrpholin}class="form-control" id="exampleInputNombreOrpholin1" />
+    //                 <div className="mb-3">
+    //                     <label for="exampleInputNombreOrpholin1" className="form-label">NombreOrpholin</label>
+    //                     <input type="number" value={this.state.newnombreOrpholin ?? this.state.infopdate.nombreOrpholin}  onChange={this.handleNombreOrpholin}className="form-control" id="exampleInputNombreOrpholin1" />
     //                 </div>
-    //                 <button type="submit" class="btn btn-primary">Submit</button>
+    //                 <button type="submit" className="btn btn-primary">Submit</button>
     //               </form>
     //             </div>
     //           </div>
@@ -255,11 +255,11 @@ class Orpholinat extends React.Component {
 
     // update ::::::::::::::::::::::::::::::::::::::::::::::::
     return (
-        <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+        <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
           <Navbar />
-          <div class="app-main">
+          <div className="app-main">
             <Siderbar />
-            <div class="app-main__outer">
+            <div className="app-main__outer">
 
               <div className="container mt-5 " >
                 <div className="app-page-title">
@@ -279,7 +279,7 @@ class Orpholinat extends React.Component {
                       <div className="d-inline-block dropdown">
                         <button type="button" className="btn-shadow  btn btn-info">
                           <span className="btn-icon-wrapper pr-2 opacity-7">
-                          <i class="fas fa-plus-circle"></i>
+                          <i className="fas fa-plus-circle"></i>
                           </span>
                           <a   className="text-decoration-none text-white" href='/CreateOrpholinat'>Add an orpholinat</a>
                         </button>

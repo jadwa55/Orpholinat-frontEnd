@@ -52,6 +52,7 @@ class CreateOrpholinat extends React.Component {
 
     async handleSubmit() {
 
+        console.log("An image was submitted: " + this.state.image);
         console.log('A name was submitted: ' + this.state.name);
         console.log('A address was submitted: ' + this.state.address);
         console.log('A city was submitted: ' + this.state.city);
@@ -63,66 +64,60 @@ class CreateOrpholinat extends React.Component {
         try {
 
             let rescreate = await createOrpholinat (this.state.name,this.state.address,this.state.city,this.state.telephone,this.state.image,this.state.description,this.state.nombreOrpholin)
-
-            if (rescreate .status == 200) {
-                console.log('Done Req  : ');
+            if (rescreate.status == 200) {
                 window.location = "/OrpholinatDash";
             }
-
-            console.log('rescreateOrpholinat : ', rescreate);
-
         } catch (error) {
             console.log('error', error);
             handelCatchInAxios(error)
         }
-    }
-    
+    }    
 
     render() {
         return (
-    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+    <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <Navbar />
-            <div class="app-main">
+            <div className="app-main">
                 <Siderbar />
-                <div class="app-main__outer">
+                <div className="app-main__outer">
                     <div className="container mt-5">
                         <div className='container'>
                             <div className=' card text-white bg-light 'style={{maxWidth: '100rem'}} >
                                 <div className="card-header text-dark">Add a new Orpholinat</div>
                                     <div className="card-body">
                                         <div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputName1" class="form-label">Name</label>
-                                                <input type="text" value={this.state.name} onChange={this.handleName} class="form-control" id="exampleInputName1" />
+                                            <div className="mb-3">
+                                                <label htmlFor="exampleInputName1" className="form-label">Name</label>
+                                                <input type="text"  onChange={this.handleName} className="form-control" id="exampleInputName1" />
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputAddress1" class="form-label">Address</label>
-                                                <input type="text" value={this.state.address} onChange={this.handleAddress} class="form-control" id="exampleInputAddress1" />
+                                            <div className="mb-3">
+                                                <label htmlFor="exampleInputAddress1" className="form-label">Address</label>
+                                                <input type="text"  onChange={this.handlAddress} className="form-control" id="exampleInputAddress1" />
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputCity1" class="form-label">City</label>
-                                                <input type="text" value={this.state.city} onChange={this.handleCity} class="form-control" id="exampleInputCity1" />
+                                            <div className="mb-3">
+                                                <label htmlFor="exampleInputCity1" className="form-label">City</label>
+                                                <input type="text"  onChange={this.handlCity} className="form-control" id="exampleInputCity1" />
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputTelephone1" class="form-label">Telephone</label>
-                                                <input type="number" value={this.state.telephone} onChange={this.handleTelephone} class="form-control" id="exampleInputTelephone1" />
+                                            <div className="mb-3">
+                                                <label htmlFor="exampleInputTelephone1" className="form-label">Telephone</label>
+                                                <input type="text"  onChange={this.handelTelephone} className="form-control" id="exampleInputTelephone1" />
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputImage1" class="form-label">Image</label>
-                                                <input type="file" onChange={this.handleImage} class="form-control" id="exampleInputImage1" multiple="multiple" />
+                                            <div className="mb-3">
+                                                <label htmlFor="exampleInputImage1" className="form-label">Image</label>
+                                                <input type="file" onChange={this.handleImage} className="form-control" id="exampleInputImage1" multiple="multiple" />
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputDescription1" class="form-label">Description</label>
-                                                <input type="text" value={this.state.description} onChange={this.handleDescription} class="form-control" id="exampleInputDescription1" />
+                                            <div className="mb-3">
+                                                <label htmlFor="exampleInputDescription1" className="form-label">Description</label>
+                                                <input type="text" onChange={this.handleDescription} className="form-control" id="exampleInputDescription1" />
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputNombreOrpholin1" class="form-label">NombreOrpholin</label>
-                                                <input type="number" value={this.state.nombreOrpholin} onChange={this.handlNombreOrpholin} class="form-control" id="exampleInputNombreOrpholin1" />
+                                            <div className="mb-3">
+                                                <label htmlFor="exampleInputNombreOrpholin1" className="form-label">NombreOrpholin</label>
+                                                <input type="number" onChange={this.handleNombreOrpholin} className="form-control" id="exampleInputNombreOrpholin1" />
                                             </div>
                                             <button onClick={(e)=>{
                                             e.preventDefault()
                                             this.handleSubmit(e)
-                                            }} type="submit" class="btn btn-primary">Submit</button>
+                                            }} type="submit" className="btn btn-primary">Submit</button>
                                         </div>
                                     </div>
                                 </div>

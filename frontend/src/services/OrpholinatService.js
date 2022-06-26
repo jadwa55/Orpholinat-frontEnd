@@ -8,22 +8,18 @@ export function getAllOrpholinat() {
   export function getOrpholinat(id) {
     return axios.get(APP_URL + "orpholinat/"+id);
   }
-  
-  export function createOrpholinat(name, address, city, telephone, description, image, nombreOrpholin) {
+
+  export function createOrpholinat(name, address, city, telephone, image, description, nombreOrpholin) {
     console.log("getAllOrpholinat");
   
     const formData = new FormData();
-  
-    formData.append("image", image, image.name);
-  
+    formData.append("image", image); 
     formData.append("name", name);
     formData.append("address", address);
     formData.append("city", city);
     formData.append("telephone", telephone);
     formData.append("description", description);
     formData.append("nombreOrpholin", nombreOrpholin);
-  
-    console.log("formData : ", formData.get("image"));
   
     return axios.post(APP_URL + "orpholinat/create", formData);
   }
