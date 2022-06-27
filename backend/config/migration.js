@@ -7,7 +7,7 @@ const User = require('../models/UserModel')
 
 Orpholin.belongsTo(Orpholinat)
 Orpholinat.hasMany(Orpholin)
-User.hasMany(Orpholinat)
+// User.hasMany(Orpholinat)
 
 
 

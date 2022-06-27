@@ -27,7 +27,7 @@ Orpholin.init({
     },
 
     sexe: {
-        type: DataTypes.BOOLEAN,
+        type: DataTypes.STRING,
         allowNull: false
     },
 

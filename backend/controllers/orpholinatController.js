@@ -1,30 +1,17 @@
 const Orpholinat = require('../models/OrpholinatModel')
-const multer = require('multer')
-const { response } = require('express')
-
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'uploads/images')
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now())
-    }
-    })
-exports.upload = multer({ storage: storage })
+const multer = require('multer')    
 
 exports.addOrpholinat = async (req,res)=>{
     try {
-
         const {name,address,city,telephone,description,nombreOrpholin} = req.body
-        const image = req.file.path
+        const image = req.file.path;
     
         const orpholinat = await Orpholinat.create({
             name: name,
             address: address,
             city: city,
             telephone: telephone,
-            image: image,
+            image: image.replace("\\","/"),
             description: description,
             nombreOrpholin: nombreOrpholin
         })
@@ -76,14 +63,13 @@ exports.deleteOrpholinat = async (req,res)=>{
 exports.getAllOrpholinat = async (req,res)=>{
     try {
         const orpholinat = await Orpholinat.findAll()
-
         if(orpholinat.length==0){
             return res.status(200).json({
                 
                 message: 'no orpholinat found'
             })
         }
-
+        
         return res.status(200).json({
             message: 'success',
             orpholinat: orpholinat
@@ -91,8 +77,7 @@ exports.getAllOrpholinat = async (req,res)=>{
 
         
     } catch (error) {
-        return res.json(error)
-        
+        return res.status(500).json(error)
     }
     // return res.json('ba3bola')
 }
