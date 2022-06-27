@@ -68,7 +68,7 @@ class Orpholinat extends React.Component {
               <div className="container orpholinat__container">
                 { this.getCards() }
                 { this.getCards() }
-                { this.getCards() }
+                {/* { this.getCards() } */}
               </div>
             </section>
         </div> 
