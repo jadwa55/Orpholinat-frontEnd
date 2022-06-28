@@ -7,7 +7,7 @@ import { useRef } from 'react';
 import emailjs from 'emailjs-com'
 
 const Contact = () => {
-  const form = useRef();
+  const form = useRef(); //renvoyer un objet modifiable 
 
   const sendEmail = (e) => {
     e.preventDefault();
